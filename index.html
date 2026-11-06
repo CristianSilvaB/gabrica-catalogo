@@ -1,0 +1,818 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary-container":"#7ba4d8","surface-container-highest":"#e3e2e3","on-tertiary-fixed":"#001e2f","brand-navy-dark":"#002747","surface-ice":"#F8FEFF","secondary-container":"#00bafd","border-soft":"#D7E9F4","tertiary-container":"#003c58","surface-variant":"#e3e2e3","inverse-on-surface":"#f2f0f1","surface-container-high":"#e9e8e9","tertiary":"#002539","on-secondary":"#ffffff","primary-fixed":"#d3e4ff","on-primary-fixed-variant":"#1a4877","secondary":"#00658c","secondary-fixed-dim":"#7fd0ff","outline":"#737780","status-warning":"#F59E0B","primary-fixed-dim":"#a1c9ff","on-primary-fixed":"#001c38","on-secondary-fixed":"#001e2d","on-tertiary-fixed-variant":"#004c6e","on-surface":"#1b1c1d","surface-container-low":"#f5f3f4","on-tertiary":"#ffffff","error":"#ba1a1a","primary":"#002343","error-container":"#ffdad6","on-surface-variant":"#42474f","status-error":"#EF4444","on-secondary-fixed-variant":"#004c6a","surface-tint":"#366090","on-secondary-container":"#004763","on-error-container":"#93000a","surface-dim":"#dbd9db","secondary-fixed":"#c5e7ff","surface-bright":"#fbf9fa","tertiary-fixed":"#c9e6ff","surface-container-lowest":"#ffffff","surface":"#fbf9fa","on-tertiary-container":"#21abef","tertiary-fixed-dim":"#89ceff","surface-container":"#efedee","inverse-primary":"#a1c9ff","primary-container":"#003967","outline-variant":"#c2c6d0","on-background":"#1b1c1d","on-primary":"#ffffff","inverse-surface":"#303031","background":"#fbf9fa","status-success":"#10B981","accent-cyan-light":"#C0F0FF","on-error":"#ffffff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"gutter-mobile":"1rem",margin:"2.5rem","space-sm":"0.5rem","space-lg":"1.5rem","margin-mobile":"1rem","space-xs":"0.25rem","space-xl":"2.5rem","space-md":"1rem",gutter:"1.5rem"},fontFamily:{"headline-sm":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"label-md":["Inter"],"headline-xl":["Plus Jakarta Sans"],"label-sm":["Inter"],"headline-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-lg":["Inter"]},fontSize:{"headline-sm":["1.125rem",{lineHeight:"1.4",letterSpacing:"-0.01em",fontWeight:"600"}],"body-sm":["0.8125rem",{lineHeight:"1.5",letterSpacing:"0.005em",fontWeight:"400"}],"headline-lg-mobile":["1.625rem",{lineHeight:"1.25",letterSpacing:"-0.015em",fontWeight:"700"}],"headline-md":["1.5rem",{lineHeight:"1.3",letterSpacing:"-0.015em",fontWeight:"700"}],"body-lg":["1.125rem",{lineHeight:"1.6",letterSpacing:"-0.01em",fontWeight:"400"}],"headline-xl-mobile":["2rem",{lineHeight:"1.2",letterSpacing:"-0.02em",fontWeight:"800"}],"label-md":["0.75rem",{lineHeight:"1.25",letterSpacing:"0.02em",fontWeight:"600"}],"headline-xl":["3rem",{lineHeight:"1.15",letterSpacing:"-0.03em",fontWeight:"800"}],"label-sm":["0.6875rem",{lineHeight:"1.2",letterSpacing:"0.04em",fontWeight:"700"}],"headline-lg":["2.25rem",{lineHeight:"1.2",letterSpacing:"-0.02em",fontWeight:"700"}],"body-md":["0.9375rem",{lineHeight:"1.55",letterSpacing:"0",fontWeight:"400"}],"label-lg":["0.875rem",{lineHeight:"1.3",letterSpacing:"0.01em",fontWeight:"600"}]}}}};</script><link rel="stylesheet" href="src/assets/css/styles.css">
+</head><body class="bg-surface text-on-surface antialiased">
+
+<!-- ======================= MODAL BIENVENIDA CLUB ARRUNCHIS ======================= -->
+<div id="club-modal-wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-club-title">
+  <div class="modal-backdrop" id="modal-backdrop"></div>
+  <div class="modal-dialog">
+    
+<!-- Top Close Bar -->
+<div class="absolute top-4 right-4 z-30">
+<button aria-label="Cerrar ventana y continuar a la tienda" class="group p-2.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gabrica-navy" id="close-modal-btn" type="button">
+<svg class="w-5 h-5 transition-transform group-hover:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12">
+<!-- BEGIN: Left Column - Brand & Form Section -->
+<section class="lg:col-span-7 p-6 sm:p-9 md:p-10 flex flex-col justify-between bg-white bg-gabrica-blob">
+<div>
+<!-- Header: Gabrica Official Logo -->
+<header class="flex items-center justify-between mb-5">
+<div class="flex items-center gap-3">
+<img alt="Gabrica Logo Oficial" class="h-9 w-auto object-contain drop-shadow-sm hover:scale-105 transition-transform" loading="eager" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUb9UpQbR_hSHn6cet5oBk-FEUkgRBTMkJ5W9yuM2IJGGBn-DXeJ-eZUTyk_QfpXiTIPwSoTCY8254mqo-i-s6tkaha784AgVkuu5eKwUMsZzdZeroVfFuRwmWhbT2h3F48W0A6UyGIsUduUjO1rfNqSNOlfTjX1iea47FdLmVza7sGbpIYeEmpmAADLi9VRVx4h6CVZroNUdgvVQIfctUUYtdvOH9mdjGBKdeU_Y8t7qCuR47Tsws">
+<div class="h-6 w-px bg-slate-200"></div>
+<span class="text-xs font-bold tracking-wider uppercase text-gabrica-blue">Pet Parents Club</span>
+</div>
+</header>
+<!-- Headline & Value Proposition -->
+<div class="mb-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase bg-amber-50 text-amber-800 border border-amber-200/80 mb-3 shadow-xs">
+<span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+              Exclusivo · 10% OFF Primera Compra
+            </span>
+<h1 class="text-2xl sm:text-3xl font-extrabold text-gabrica-navy tracking-tight leading-tight">
+              ¡Obtén el Pasaporte del Arrunchis para tu peludo!
+            </h1>
+<p class="text-slate-600 text-sm sm:text-base mt-2 leading-relaxed">
+              Únete a nuestra comunidad y recibe gratis su credencial médica digital: alertas de vacunación, asesoría nutricional veterinaria y mimos exclusivos para consentirlo.
+            </p>
+</div>
+<!-- Quick Perks Chips -->
+<div class="grid grid-cols-3 gap-2 py-2 mb-6 border-y border-slate-100 text-xs text-slate-700 font-medium">
+<div class="flex items-center gap-1.5">
+<span class="text-base">🎁</span>
+<span class="">10% OFF de bienvenida</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-base">💉</span>
+<span class="">Carné y vacunas al día</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-base">🩺</span>
+<span class="">Guía médica experta</span>
+</div>
+</div>
+<!-- BEGIN: Lead Capture Form -->
+<form class="space-y-3.5" data-purpose="lead-capture-form" id="passport-lead-form">
+<!-- Input 1: Owner Name -->
+<div>
+<label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1" for="owner-name">
+                Tu nombre completo
+              </label>
+<div class="relative">
+<input class="w-full text-sm rounded-xl border-slate-200 bg-slate-50/70 focus:bg-white focus:border-gabrica-navy focus:ring-2 focus:ring-gabrica-navy/20 transition-all py-2.5 px-3.5" id="owner-name" name="owner_name" placeholder="Ej. Carolina Gómez" required="" type="text">
+</div>
+</div>
+<!-- Input 2: Pet Name and Species Selector -->
+<div>
+<label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1" for="pet-name">
+                Nombre de tu peludo y especie
+              </label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+<div class="sm:col-span-2">
+<input class="w-full text-sm rounded-xl border-slate-200 bg-slate-50/70 focus:bg-white focus:border-gabrica-navy focus:ring-2 focus:ring-gabrica-navy/20 transition-all py-2.5 px-3.5" id="pet-name" name="pet_name" placeholder="Ej. Milo o Luna" required="" type="text">
+</div>
+<div class="sm:col-span-1">
+<select class="w-full text-sm rounded-xl border-slate-200 bg-slate-50/70 focus:bg-white focus:border-gabrica-navy focus:ring-2 focus:ring-gabrica-navy/20 transition-all py-2.5 px-3" id="pet-type" name="pet_type" required="">
+<option value="perro">🐶 Perro</option>
+<option value="gato">🐱 Gato</option>
+</select>
+</div>
+</div>
+</div><div class="grid grid-cols-2 gap-2">
+  <div>
+    <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1" for="pet-age">
+      Edad del peludo
+    </label>
+    <select class="w-full text-sm rounded-xl border-slate-200 bg-slate-50/70 focus:bg-white focus:border-gabrica-navy focus:ring-2 focus:ring-gabrica-navy/20 transition-all py-2.5 px-3" id="pet-age" name="pet_age" required="">
+      <option value="" disabled="" selected="">Seleccionar etapa</option>
+      <option value="cachorro">Cachorro / Gatito (&lt; 1 año)</option>
+      <option value="adulto">Adulto (1 - 7 años)</option>
+      <option value="senior">Senior (+7 años)</option>
+    </select>
+  </div>
+  <div>
+    <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1" for="pet-weight">
+      Peso aproximado
+    </label>
+    <div class="relative">
+      <input class="w-full text-sm rounded-xl border-slate-200 bg-slate-50/70 focus:bg-white focus:border-gabrica-navy focus:ring-2 focus:ring-gabrica-navy/20 transition-all py-2.5 px-3.5 pr-10" id="pet-weight" name="pet_weight" placeholder="Ej. 8.5" step="0.1" min="0.1" max="100" required="" type="number">
+      <span class="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-semibold text-slate-400 pointer-events-none">kg</span>
+    </div>
+  </div>
+</div>
+<!-- Input 3: Email -->
+<div>
+<label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1" for="email">
+                Tu correo electrónico
+              </label>
+<input class="w-full text-sm rounded-xl border-slate-200 bg-slate-50/70 focus:bg-white focus:border-gabrica-navy focus:ring-2 focus:ring-gabrica-navy/20 transition-all py-2.5 px-3.5" id="email" name="email" placeholder="ejemplo@correo.com" required="" type="email">
+</div>
+<!-- Input 4: WhatsApp / Phone with Colombia Flag -->
+<div>
+<label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1" for="phone">
+                Teléfono WhatsApp (para recordatorios y beneficios)
+              </label>
+<div class="flex rounded-xl shadow-xs overflow-hidden border border-slate-200 focus-within:border-gabrica-navy focus-within:ring-2 focus-within:ring-gabrica-navy/20 transition-all">
+<!-- Country Flag Prefix (Colombia +57) -->
+<div class="flex items-center gap-1 px-3 bg-slate-100/90 text-slate-700 border-r border-slate-200 text-sm font-medium select-none">
+<!-- Bandera de Colombia en SVG nítido -->
+<svg aria-label="Bandera de Colombia" class="w-5 h-3.5 rounded shadow-xs" viewBox="0 0 900 600">
+<rect fill="#FCD116" height="300" width="900"></rect>
+<rect fill="#003893" height="150" width="900" y="300"></rect>
+<rect fill="#CE1126" height="150" width="900" y="450"></rect>
+</svg>
+<span class="text-xs text-slate-600 font-semibold ml-1">+57</span>
+</div>
+<input class="w-full text-sm border-0 bg-slate-50/70 focus:bg-white focus:ring-0 py-2.5 px-3.5" id="phone" name="phone" placeholder="300 123 4567" required="" type="tel">
+</div>
+</div>
+<!-- Consent Checkbox -->
+<div class="flex items-start gap-2.5 pt-1">
+<input class="mt-1 h-4 w-4 rounded text-gabrica-navy border-slate-300 focus:ring-gabrica-navy" id="terms" name="terms" required="" type="checkbox">
+<label class="text-xs text-slate-500 leading-snug" for="terms">
+                Acepto recibir recordatorios de salud preventiva y autorizo el tratamiento de mis datos personales según la política de Gabrica Colombia.
+              </label>
+</div>
+<!-- CTA Button -->
+<button class="w-full mt-2 py-3.5 px-6 rounded-xl font-extrabold text-sm uppercase tracking-wider text-gabrica-navyDark bg-gabrica-accent hover:bg-gabrica-accentHover active:scale-[0.99] transition-all duration-150 shadow-lg shadow-amber-500/25 flex items-center justify-center gap-2" type="submit">
+<span class="">OBTENER MI PASAPORTE DEL ARRUNCHIS</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+<path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</form>
+<!-- END: Lead Capture Form -->
+</div>
+<!-- Secondary action -->
+<div class="pt-4 text-center">
+<button class="text-xs text-slate-400 hover:text-slate-600 underline underline-offset-4 transition-colors" id="skip-link" type="button">
+            Explorar tienda sin pasaporte por ahora
+          </button>
+</div>
+</section>
+<!-- END: Left Column -->
+<!-- BEGIN: Right Column - Pasaporte del Arrunchis Showcase -->
+<section class="lg:col-span-5 bg-gradient-to-br from-gabrica-navy via-gabrica-navyDark to-slate-950 p-6 sm:p-9 text-white flex flex-col justify-between relative overflow-hidden border-t lg:border-t-0 lg:border-l border-white/10">
+<!-- Background Glow Accent -->
+<div class="absolute -top-16 -right-16 w-52 h-52 bg-amber-400/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-16 -left-16 w-52 h-52 bg-sky-400/20 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Upper Banner -->
+<div class="relative z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-amber-300 text-xs font-semibold uppercase tracking-wider border border-white/10 mb-4">
+<span class="">🐾</span> Pasaporte Digital &amp; Físico
+          </div>
+<h2 class="text-xl font-bold tracking-tight text-white">
+            Tu aliado oficial para una vida llena de arrunchis saludables
+          </h2>
+<p class="text-xs text-sky-100/80 mt-1 leading-relaxed">
+            Conserva el historial de vacunas, desparasitaciones y recomendaciones avaladas por el equipo médico Gabrica.
+          </p>
+</div>
+<!-- Passport Credential Card Preview -->
+<div class="my-6 relative z-10 passport-card rounded-2xl p-5 border border-amber-400/30 text-white transform hover:rotate-1 transition-transform duration-300 shadow-2xl">
+<!-- Card Header -->
+<div class="flex justify-between items-start border-b border-white/15 pb-3">
+<div>
+<p class="text-[10px] tracking-widest uppercase font-bold text-amber-300/90">REPÚBLICA DE LOS PELUDOS</p>
+<h3 class="text-base font-extrabold tracking-wide font-serif gold-foil">PASAPORTE DEL ARRUNCHIS</h3>
+</div>
+<div class="w-8 h-8 rounded-full bg-amber-400/20 border border-amber-300/40 flex items-center justify-center text-sm shadow-inner">
+              🐾
+            </div>
+</div>
+<!-- Card Body / Profile Data -->
+<div class="grid grid-cols-3 gap-3 my-4 items-center">
+<!-- Peludo Avatar Placeholder / Visual Badge -->
+<div class="col-span-1 aspect-square rounded-xl bg-slate-800/80 border-2 border-amber-300/40 flex flex-col items-center justify-center relative overflow-hidden group shadow-md">
+<span class="text-3xl">🐶</span>
+<span class="text-[9px] uppercase tracking-tighter text-amber-200 mt-1 font-bold">FOTO OFICIAL</span>
+</div>
+<!-- Pet Details -->
+<div class="col-span-2 space-y-1.5 text-[11px]">
+<div>
+<span class="text-sky-200/60 block text-[9px] uppercase">Titular Peludo:</span>
+<span class="font-bold text-white tracking-wide text-xs">Milo · Canino Feliz</span>
+</div>
+<div class="grid grid-cols-2 gap-1">
+<div>
+<span class="text-sky-200/60 block text-[9px] uppercase">ID Pasaporte:</span>
+<span class="font-mono text-amber-300 font-semibold text-[10px]">GAB-2026-CO</span>
+</div>
+<div>
+<span class="text-sky-200/60 block text-[9px] uppercase">Estatus:</span>
+<span class="text-emerald-400 font-bold text-[10px]">● Activo</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card Footer & Official Seal -->
+<div class="pt-2 border-t border-white/15 flex justify-between items-center text-[10px]">
+<div class="flex items-center gap-1.5 text-amber-200/90">
+<svg class="w-3.5 h-3.5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd"></path>
+</svg>
+<span class="">Gabrica Vet Check Verified</span>
+</div>
+<div class="badge-stamp px-2 py-0.5 rounded text-[9px] font-bold text-amber-300 uppercase tracking-widest bg-amber-400/10">
+              ORIGINAL
+            </div>
+</div>
+</div>
+<!-- Trust Badges Footer -->
+<div class="relative z-10 pt-2 border-t border-white/10 flex items-center justify-between text-[11px] text-sky-100/70">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span class="">+45.000 Pet Parents en Colombia</span>
+</div>
+<span class="font-semibold text-white">#GabricaArrunchis</span>
+</div>
+</section>
+<!-- END: Right Column -->
+</div>
+
+  </div>
+</div>
+<!-- ============================================================================== -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,39,71,0.06)]"><div class="bg-primary text-on-primary text-label-sm font-label-sm"><div class="max-w-[1280px] mx-auto px-gutter h-8 flex items-center justify-between"><div class="flex items-center gap-space-lg"><span class="flex items-center gap-space-xs text-secondary-fixed font-semibold"><span class="material-symbols-outlined text-[14px]">local_shipping</span><span class="">Envíos gratis en Colombia por compras superiores a $120.000</span></span><span class="hidden lg:inline text-on-primary-container font-normal">|</span><span class="hidden sm:flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px]">chat</span><span class="">Atención tutores: WhatsApp +57 3173100715</span></span></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-primary-container px-space-sm py-0.5 rounded-full text-white"><span class="text-[11px]">🇨🇴</span><span class="">Colombia</span></div><span class="text-on-primary-container hidden md:inline">|</span><a class="hover:text-secondary-fixed transition-colors flex items-center gap-1 font-medium" data-path="mi-cuenta" href="#"><span class="material-symbols-outlined text-[14px]">person</span><span class="">Mi Cuenta / Iniciar Sesión</span></a><span class="text-on-primary-container hidden md:inline">|</span><button class="flex items-center gap-1.5 bg-secondary-container text-on-secondary-container px-2.5 py-0.5 rounded-full font-bold hover:bg-secondary-fixed transition-colors" type="button"><span class="material-symbols-outlined text-[15px]">shopping_bag</span><span class="">$0 · 0 items</span></button></div></div></div><div class="h-24 max-w-[1280px] mx-auto px-gutter flex items-center justify-between gap-space-lg"><div class="flex items-center shrink-0"><a href="#" class="inline-block"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgmzux6koqD88gcVGc811DkbYEyLWUX2NZoDo_P-BxNi40m_odx3ApJ6rqVE2H6gnZImTVQOLX_S9RUIga9HuQvS6n9qZUebrqxCFJpFg0dM6X5mTe-WhrhJEp7N_2KgKLv97vI7WA7d6SeiXXSssrlGPwL5ydUeLaSWqfwTeEJNmlcAXLOvHBpcLweUnsnoch-EQtCjibK-ua5gas4jjZIZB5JwGHza0tUiO47Y5u3ozCgARIqxu1" alt="Gabrica Tutores de Mascotas" class="h-10 md:h-12 w-auto object-contain"></a></div><div class="flex-1 max-w-xl hidden md:block"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-space-md text-secondary text-[20px]">search</span><input class="w-full pl-10 pr-space-md py-2.5 rounded-full bg-surface-ice font-body-md text-body-md text-on-surface placeholder:text-outline border border-border-soft focus:outline-none focus:ring-1 focus:ring-secondary-container transition-all" placeholder="Buscar por raza, edad, alimento o necesidad médica..." type="text"><button class="absolute right-1.5 px-space-md py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-brand-navy-dark transition-colors" type="button">Buscar</button></div></div><div class="flex items-center gap-space-md shrink-0"><a class="flex items-center gap-2 px-4 py-2 rounded-full bg-secondary text-white hover:bg-brand-navy-dark transition-colors font-label-md text-label-md shadow-sm" href="#"><span class="material-symbols-outlined text-[18px]">shopping_cart</span><span class="font-bold">Mi Carrito</span><span class="bg-white text-primary text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center ml-1">0</span></a></div></div><nav class="bg-surface-ice border-t border-border-soft" data-active-classes="text-primary font-bold border-b-2 border-primary"><div class="max-w-[1280px] mx-auto px-gutter h-11 flex items-center justify-between"><div class="flex items-center gap-space-lg"><a aria-current="page" class="h-11 inline-flex items-center transition-colors text-primary font-bold border-b-2 border-primary" data-path="universo-mascotas" href="#">Universo Mascotas</a><a class="h-11 inline-flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="catalogo-perros" href="#">Perros</a><a class="h-11 inline-flex items-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="catalogo-gatos" href="#">Gatos</a><a class="h-11 inline-flex items-center font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="soluciones-empresas" href="#">Empresas</a><a class="h-11 inline-flex items-center font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="area-veterinarios" href="#">Veterinarios</a></div><div class="hidden sm:flex items-center gap-space-sm"><span class="font-label-sm text-label-sm text-secondary bg-accent-cyan-light/40 px-space-sm py-1 rounded-full font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">favorite</span><span class="">Tienda Oficial para Pet Parents</span></span></div></div></nav></header><main class="w-full pt-44 bg-surface min-h-[calc(100vh-280px)]"><div class="flex flex-col w-full">
+<!-- Top Breadcrumb & Live Context Bar -->
+<section class="w-full bg-surface-container-low">
+<div class="max-w-[1280px] mx-auto px-gutter py-space-sm flex flex-wrap items-center justify-between gap-space-sm">
+<nav aria-label="Ruta de navegación" class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[15px]">home</span>
+<span class="">Inicio</span>
+</a>
+<span class="text-outline text-xs">/</span>
+<a class="hover:text-primary transition-colors" href="#">Universo Mascotas</a>
+<span class="text-outline text-xs">/</span>
+<span class="font-bold text-primary">Catálogo de Productos</span>
+</nav>
+<div class="hidden md:flex items-center gap-space-md font-label-sm text-label-sm text-secondary"><span class="flex items-center gap-1 text-primary font-bold"><span class="w-2 h-2 rounded-full bg-status-success inline-block"></span>✓ 100% Original con Registro ICA</span><span class="text-outline-variant">•</span><span class="text-secondary font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-[15px]">bolt</span>Entrega garantizada en 24-48h</span></div>
+</div>
+</section>
+<!-- Hero Banner: Visual Identity, Title & Category Shortcuts -->
+<section class="w-full bg-surface-ice relative overflow-hidden py-space-xl">
+<div class="absolute right-0 top-0 w-96 h-96 bg-secondary-fixed/30 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"></div>
+<div class="absolute left-1/3 bottom-0 w-80 h-80 bg-primary-fixed/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-[1280px] mx-auto px-gutter relative z-10 flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="inline-flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-1.5 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">pets</span>
+<span class="font-label-lg text-label-lg text-primary tracking-wide">Universo Mascotas</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-md text-label-md bg-accent-cyan-light/30 px-space-md py-1 rounded-full text-brand-navy-dark">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span class="">Distribuidor Exclusivo Hill's, Zoetis &amp; Marcas Líderes</span>
+</div>
+</div>
+<div class="max-w-3xl"><h1 class="font-headline-xl text-headline-xl text-primary tracking-tight">Nutrición y Cuidado para tu Peludo</h1><p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs">Encuentra el alimento ideal, suplementos y cuidados recomendados por veterinarios para que tu perro o gato viva una vida más sana, plena y tu arrunchis dure muchos más años. Envío directo a la puerta de tu casa con respaldo garantizado.</p></div>
+<!-- Category Fast Shortcuts -->
+<div class="pt-space-sm flex flex-wrap items-center gap-space-sm"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider mr-2">Categorías para tu peludo:</span><button class="group flex items-center gap-space-xs bg-surface-container-lowest hover:bg-primary hover:text-on-primary text-primary px-space-md py-2 rounded-full shadow-sm transition-all text-label-md font-label-md" type="button"><span class="material-symbols-outlined text-[18px] text-secondary group-hover:text-secondary-fixed">sound_detection_dog_barking</span><span class="">Perros</span></button><button class="group flex items-center gap-space-xs bg-surface-container-lowest hover:bg-primary hover:text-on-primary text-primary px-space-md py-2 rounded-full shadow-sm transition-all text-label-md font-label-md" type="button"><span class="material-symbols-outlined text-[18px] text-secondary group-hover:text-secondary-fixed">pets</span><span class="">Gatos</span></button><button class="group flex items-center gap-space-xs bg-primary-container text-white px-space-md py-2 rounded-full shadow-sm hover:bg-primary transition-all text-label-md font-label-md" type="button"><span class="material-symbols-outlined text-[18px] text-secondary-fixed">medical_services</span><span class="">Dietas Especiales · Prescription</span></button><button class="group flex items-center gap-space-xs bg-surface-container-lowest hover:bg-primary hover:text-on-primary text-primary px-space-md py-2 rounded-full shadow-sm transition-all text-label-md font-label-md" type="button"><span class="material-symbols-outlined text-[18px] text-secondary group-hover:text-secondary-fixed">cookie</span><span class="">Snacks &amp; Premios</span></button></div>
+</div>
+</section>
+<!-- Filter & Catalog Main Workspace -->
+<main class="w-full bg-surface py-space-xl">
+<div class="max-w-[1280px] mx-auto px-gutter flex flex-col gap-space-lg">
+<!-- Active Filters & Search Bar Toolbar -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<!-- Results Counter & Search Field -->
+<div class="flex flex-wrap items-center gap-space-md flex-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary">Productos</span>
+<span class="font-label-sm text-label-sm bg-surface-ice text-secondary px-2.5 py-1 rounded-full font-bold">
+              148 disponibles
+            </span>
+</div>
+<div class="relative flex-1 min-w-[260px] max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+<input class="w-full pl-9 pr-8 py-2 rounded-full bg-surface-ice text-body-md font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest transition-all" placeholder="Filtrar por nombre, principio activo o SKU..." type="text" value="Hill's">
+<button class="absolute right-2.5 top-1/2 -translate-y-1/2 text-outline hover:text-primary" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+<!-- Sort Select & B2B Switch -->
+<div class="flex flex-wrap items-center gap-space-md justify-between lg:justify-end">
+<div class="flex items-center gap-2">
+<label class="font-label-md text-label-md text-on-surface-variant" for="sort-select">Ordenar por:</label>
+<select class="bg-surface-ice text-primary font-label-md text-label-md py-2 px-3 rounded-lg focus:outline-none cursor-pointer" id="sort-select">
+<option>Relevancia Clínica</option>
+<option>Nombre A - Z</option>
+<option>Novedades y Lanzamientos</option>
+<option>Mayor Demanda B2B</option>
+</select>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-lg">
+<button class="p-1.5 rounded bg-surface-container-lowest text-primary shadow-sm" title="Vista en cuadrícula" type="button">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+</button>
+<button class="p-1.5 rounded text-outline hover:text-primary" title="Vista compacta" type="button">
+<span class="material-symbols-outlined text-[18px]">view_list</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Active Filter Pill Chips Bar -->
+<div class="flex flex-wrap items-center gap-2 bg-surface-ice p-space-sm rounded-xl">
+<span class="font-label-sm text-label-sm text-outline mr-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+          Filtros aplicados:
+        </span>
+<span class="inline-flex items-center gap-1.5 bg-surface-container-lowest text-primary font-label-sm text-label-sm px-3 py-1 rounded-full shadow-sm">
+<span class="">Especie: <strong>Perro</strong></span>
+<button class="hover:text-status-error flex items-center" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1.5 bg-surface-container-lowest text-primary font-label-sm text-label-sm px-3 py-1 rounded-full shadow-sm">
+<span class="">Tipo: <strong>Alimentación y Nutrición</strong></span>
+<button class="hover:text-status-error flex items-center" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1.5 bg-surface-container-lowest text-primary font-label-sm text-label-sm px-3 py-1 rounded-full shadow-sm">
+<span class="">Subcat: <strong>Alimento Húmedo</strong></span>
+<button class="hover:text-status-error flex items-center" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1.5 bg-surface-container-lowest text-primary font-label-sm text-label-sm px-3 py-1 rounded-full shadow-sm">
+<span class="">Etapa: <strong>Senior</strong></span>
+<button class="hover:text-status-error flex items-center" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1.5 bg-primary text-on-primary font-label-sm text-label-sm px-3 py-1 rounded-full shadow-sm">
+<span class="">Marca: <strong>Hill's</strong></span>
+<button class="hover:text-secondary-fixed flex items-center" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<button class="font-label-sm text-label-sm text-secondary hover:text-primary underline ml-2" type="button">
+          Limpiar todos los filtros
+        </button>
+</div>
+<!-- Split Layout: Left Filters + Right Catalog Cards -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- ======================= LEFT FILTER RAIL ======================= -->
+<aside class="lg:col-span-3 flex flex-col gap-space-md sticky top-48">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container">
+<span class="font-headline-sm text-headline-sm text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">filter_list</span>
+                Filtros
+              </span>
+<button class="font-label-sm text-label-sm text-outline hover:text-primary" type="button">Restablecer</button>
+</div>
+<!-- Group 1: Tipo de mascota -->
+<div class="flex flex-col gap-space-xs pb-space-sm border-b border-surface-container">
+<div class="flex items-center justify-between py-1 cursor-pointer">
+<span class="font-label-lg text-label-lg text-primary font-bold">Tipo de mascota</span>
+<span class="material-symbols-outlined text-[18px] text-outline">expand_less</span>
+</div>
+<div class="flex flex-col gap-2 pt-1">
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-primary font-medium group-hover:text-secondary">Perro</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">98</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-secondary">Gato</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">50</span>
+</label>
+</div>
+</div>
+<!-- Group 2: Tipo de producto -->
+<div class="flex flex-col gap-space-xs pb-space-sm border-b border-surface-container">
+<div class="flex items-center justify-between py-1 cursor-pointer">
+<span class="font-label-lg text-label-lg text-primary font-bold">Tipo de producto</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">expand_less</span>
+</div>
+<div class="flex flex-col gap-2 pt-1 max-h-48 overflow-y-auto pr-1">
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Accesorios y Juguetes</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">14</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input checked="" class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-primary font-medium group-hover:text-primary">Alimentación y Nutrición</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">84</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Aseo y Belleza</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">19</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Bienestar Emocional</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">6</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Diagnóstico</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">8</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Medicamentos</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">32</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Prevención y Protección</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">21</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Suplementos</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">11</span>
+</label>
+</div>
+</div>
+<!-- Group 3: Subcategoría -->
+<div class="flex flex-col gap-space-xs pb-space-sm border-b border-surface-container">
+<div class="flex items-center justify-between py-1 cursor-pointer">
+<span class="font-label-lg text-label-lg text-primary font-bold">Subcategoría</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">expand_less</span>
+</div>
+<div class="flex flex-col gap-2 pt-1 max-h-56 overflow-y-auto pr-1">
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input checked="" class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-primary font-medium group-hover:text-primary">Alimento Húmedo</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">24</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Alimento Seco</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">60</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Antibióticos</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">12</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Antieméticos y gastrocinéticos</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">7</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Antiinflamatorios y analgésicos</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">15</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Baño general</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">8</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Biomoduladores</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">4</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Cardiovasculares</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">9</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Dermocosméticos</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">16</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Desparasitantes y Antipulgas</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">28</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Entrenamiento y Comportamiento</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">5</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Esencias florales</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">3</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Feromonas</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">6</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Grooming</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">11</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Higiene sanitaria</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">7</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Hormonales y reproductivos</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">4</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Juguetes</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">9</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Limpieza de espacios</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">5</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Mucolíticos y expectorantes</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">3</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Multivitamínico</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">8</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Nutracéuticos</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">10</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Óticos y oftálmicos</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">6</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Pruebas rápidas y equipos</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">4</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Snacks</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">13</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Suplementos nutricionales</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">12</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Vacunas</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">9</span>
+</label>
+</div>
+</div>
+<!-- Group 4: Etapas de vida -->
+<div class="flex flex-col gap-space-xs pb-space-sm border-b border-surface-container">
+<div class="flex items-center justify-between py-1 cursor-pointer">
+<span class="font-label-lg text-label-lg text-primary font-bold">Etapas de vida</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">expand_less</span>
+</div>
+<div class="flex flex-col gap-2 pt-1">
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Cría/Joven</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">12</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Cachorro</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">34</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Gatito</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">18</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Adulto</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">75</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input checked="" class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-primary font-medium group-hover:text-primary">Senior</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">29</span>
+</label>
+</div>
+</div>
+<!-- Group 5: Marcas -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between py-1 cursor-pointer">
+<span class="font-label-lg text-label-lg text-primary font-bold">Marcas</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">expand_less</span>
+</div>
+<p class="font-label-sm text-label-sm text-outline mb-1">Marcas líderes en Colombia:</p>
+<div class="flex flex-col gap-2 max-h-48 overflow-y-auto pr-1">
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input checked="" class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-primary font-semibold group-hover:text-primary">Hill's Prescription Diet</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">36</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input checked="" class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-primary font-semibold group-hover:text-primary">Hill's Science Diet</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">28</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Zoetis</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">22</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">GranPlus</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">14</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Equilíbrio</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">18</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">MAX</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">11</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Holliday</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">9</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Vetnil</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">8</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary">Hydra</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">6</span>
+</label>
+</div>
+</div>
+<!-- Download Catalog Button -->
+<div class="pt-space-xs"><a class="w-full flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg bg-secondary-container text-on-secondary-container font-label-md text-label-md hover:bg-secondary-fixed transition-colors text-center font-bold mb-2 shadow-sm" href="#"><span class="material-symbols-outlined text-[18px]">calculate</span><span class="">Calculadora de Ración Diaria</span></a><div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-ice border border-border-soft text-left"><span class="material-symbols-outlined text-secondary text-[22px]">verified</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-primary font-bold">Garantía de Satisfacción 100%</span><span class="font-body-sm text-body-sm text-on-surface-variant text-xs">Hill's &amp; Gabrica respaldan el bienestar de tu mascota.</span></div></div></div>
+</div>
+</aside>
+<!-- ======================= MAIN PRODUCT GRID ======================= -->
+<div class="lg:col-span-9 flex flex-col gap-space-lg">
+<!-- 6 Verbatim Products from reference site -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-md"><article class="group bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between relative border border-border-soft"><div class="flex flex-col gap-space-sm"><div class="flex items-center justify-between gap-1"><span class="bg-surface-ice text-secondary font-label-sm text-label-sm px-2.5 py-0.5 rounded-full uppercase tracking-wider font-semibold">Hill's Science Diet</span><span class="bg-status-success/15 text-status-success font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">-10% OFF</span></div><div class="w-full aspect-square bg-surface-ice rounded-lg p-space-md flex items-center justify-center relative overflow-hidden group-hover:bg-surface-container/50 transition-colors"><img class="max-h-full max-w-full object-contain transform group-hover:scale-105 transition-transform duration-300" alt="Hill's Science Diet Adult 7+ Small Paws" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTxULLlNRw4iWrSvouAqbnfIm3ADwwg6tFfRlGy-AcEB52le-zuJfdTyCQ2-Q961rbC5kF3QuZ4mB0BYcj2BwoJJdEfvCw8BCU8MTOtgfSzaVxE0KulxibD2XfbzdAPuF44ToF-pkJidv0XLmp0mA0xCZ0czmI6UBpcMOyPtb9BylawzBAMpEOxQrUDqKGkQAiRHeQlqiiIbp78ErAF2UACB4fcWtiSc2rrVnlXq4"><span class="absolute bottom-2 right-2 bg-surface-container-lowest/90 px-2 py-0.5 rounded text-[11px] font-label-sm text-outline font-semibold">Bandeja 99 g</span></div><div class="flex flex-col gap-1 mt-1"><span class="text-xs text-outline">Perro · Senior 7+</span><h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-2 leading-snug">Comida Húmeda Para Perro Hill's Science Diet Senior 7+ Small Paws Estofado Con Pollo 99 G</h2><div class="flex items-baseline gap-2 mt-1"><span class="font-headline-sm text-headline-sm text-primary font-bold">$14.900 COP</span><span class="text-xs text-outline line-through">$16.500</span></div><p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">Nutrición equilibrada para perros miniatura en bandeja práctica y deliciosa.</p></div></div><div class="pt-space-md mt-space-sm border-t border-surface-container flex flex-col gap-2"><button class="w-full py-2.5 px-3 rounded-lg bg-primary text-on-primary hover:bg-brand-navy-dark transition-colors font-label-md text-label-md flex items-center justify-center gap-2 font-bold shadow-sm" type="button"><span class="material-symbols-outlined text-[18px]">add_shopping_cart</span><span class="">Agregar al carrito</span></button><div class="flex items-center justify-between text-xs pt-1"><a class="text-secondary hover:underline font-semibold flex items-center gap-1" href="#"><span class="">Ver detalle</span><span class="material-symbols-outlined text-[14px]">arrow_forward</span></a><span class="text-status-success flex items-center gap-1 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-status-success inline-block"></span>Disponible</span></div></div></article><article class="group bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between relative border border-border-soft"><div class="flex flex-col gap-space-sm"><div class="flex items-center justify-between gap-1"><span class="bg-primary text-on-primary font-label-sm text-label-sm px-2.5 py-0.5 rounded-full uppercase tracking-wider font-semibold">Prescription Diet</span><span class="bg-accent-cyan-light/40 text-brand-navy-dark font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">Fórmula Veterinaria</span></div><div class="w-full aspect-square bg-surface-ice rounded-lg p-space-md flex items-center justify-center relative overflow-hidden group-hover:bg-surface-container/50 transition-colors"><img class="max-h-full max-w-full object-contain transform group-hover:scale-105 transition-transform duration-300" alt="Hill's Prescription Diet a/d Urgencia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsHssKlqgnQcnkd0eKvIDv69kRnTIiow8uys8xg5CrHOQ_hOHBKJ-AT3WGdO3EOO5TskzwVUSc3XTwliYmuLROD_oxaKWkgDwlYRsutmbyraeZn30JfCxs3GasCoYBVAWtLZ7uTYMc3q_asa9fKyU7YvIgO16BZ_t6FMz65UUzcJ4MrramsCLs5SwJMW1vk-J4bwCZla9byJNenAk8OmlX_GeFkODssu1sXe9_1qo"><span class="absolute bottom-2 right-2 bg-surface-container-lowest/90 px-2 py-0.5 rounded text-[11px] font-label-sm text-outline font-semibold">Lata 5.5 Oz</span></div><div class="flex flex-col gap-1 mt-1"><span class="text-xs text-outline">Perro y Gato · Urgencia y Convalecencia</span><h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-2 leading-snug">Comida Húmeda Para Perro Y Gato Hill's Prescription Diet Cuidado De Urgencia A/d 5,5 Oz</h2><div class="flex items-baseline gap-2 mt-1"><span class="font-headline-sm text-headline-sm text-primary font-bold">$28.500 COP</span></div><p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">Alimento de alta densidad energética para mascotas en postoperatorio o recuperación.</p></div></div><div class="pt-space-md mt-space-sm border-t border-surface-container flex flex-col gap-2"><button class="w-full py-2.5 px-3 rounded-lg bg-primary text-on-primary hover:bg-brand-navy-dark transition-colors font-label-md text-label-md flex items-center justify-center gap-2 font-bold shadow-sm" type="button"><span class="material-symbols-outlined text-[18px]">add_shopping_cart</span><span class="">Agregar al carrito</span></button><div class="flex items-center justify-between text-xs pt-1"><a class="text-secondary hover:underline font-semibold flex items-center gap-1" href="#"><span class="">Ver detalle</span><span class="material-symbols-outlined text-[14px]">arrow_forward</span></a><span class="text-status-success flex items-center gap-1 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-status-success inline-block"></span>Disponible</span></div></div></article><article class="group bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between relative border border-border-soft"><div class="flex flex-col gap-space-sm"><div class="flex items-center justify-between gap-1"><span class="bg-primary text-on-primary font-label-sm text-label-sm px-2.5 py-0.5 rounded-full uppercase tracking-wider font-semibold">Prescription Diet</span><span class="bg-status-success/15 text-status-success font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">-8% OFF</span></div><div class="w-full aspect-square bg-surface-ice rounded-lg p-space-md flex items-center justify-center relative overflow-hidden group-hover:bg-surface-container/50 transition-colors"><img class="max-h-full max-w-full object-contain transform group-hover:scale-105 transition-transform duration-300" alt="Hill's Prescription Diet c/d Urinario" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa3V20cs7k78B6900ya9FMPdLTO5ZJMqcxQG1gp4yjFM2SqZsjquvYdF-m8YB7zFwbRcDur8NOC4MIxRj1OOvketilzKNQA1E0VGXgoEIRXE8VurSMyabNcYcUckfF7502wvsYhGMI9f8-a6JIjQMQpXapbco-8GuVkk3gySCf_5CBisR_IjfPJJtP-AHSofYkTThBL88s2l5yf40lFk-DIbQtU19H0imA9QDgO7Y"><span class="absolute bottom-2 right-2 bg-surface-container-lowest/90 px-2 py-0.5 rounded text-[11px] font-label-sm text-outline font-semibold">Bulto 3.5 Lb</span></div><div class="flex flex-col gap-1 mt-1"><span class="text-xs text-outline">Perro · Cuidado Urinario</span><h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-2 leading-snug">Comida Seca Para Perro Hill's Prescription Diet Cuidado Urinario C/d 3,5 Lb</h2><div class="flex items-baseline gap-2 mt-1"><span class="font-headline-sm text-headline-sm text-primary font-bold">$142.900 COP</span><span class="text-xs text-outline line-through">$155.000</span></div><p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">Control clínico de estruvita y salud de vejiga en perros con tendencia urinaria.</p></div></div><div class="pt-space-md mt-space-sm border-t border-surface-container flex flex-col gap-2"><button class="w-full py-2.5 px-3 rounded-lg bg-primary text-on-primary hover:bg-brand-navy-dark transition-colors font-label-md text-label-md flex items-center justify-center gap-2 font-bold shadow-sm" type="button"><span class="material-symbols-outlined text-[18px]">add_shopping_cart</span><span class="">Agregar al carrito</span></button><div class="flex items-center justify-between text-xs pt-1"><a class="text-secondary hover:underline font-semibold flex items-center gap-1" href="#"><span class="">Ver detalle</span><span class="material-symbols-outlined text-[14px]">arrow_forward</span></a><span class="text-status-success flex items-center gap-1 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-status-success inline-block"></span>Disponible</span></div></div></article><article class="group bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between relative border border-border-soft"><div class="flex flex-col gap-space-sm"><div class="flex items-center justify-between gap-1"><span class="bg-primary text-on-primary font-label-sm text-label-sm px-2.5 py-0.5 rounded-full uppercase tracking-wider font-semibold">Prescription Diet</span><span class="bg-primary/5 text-primary font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">Hipoalergénico</span></div><div class="w-full aspect-square bg-surface-ice rounded-lg p-space-md flex items-center justify-center relative overflow-hidden group-hover:bg-surface-container/50 transition-colors"><img class="max-h-full max-w-full object-contain transform group-hover:scale-105 transition-transform duration-300" alt="Hill's Prescription Diet d/d Alergias" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDflOAHTmQDltwVKDrXnQxclkKEMNFQSWsuC1Mk2ZzBmglxwZnhlZaPDph5_PO-gSI4t12KilTcWObKvxQ0SSUAfeFtfB2R1aWUMLKt9bUp-JWfHavM9lHz2YZnYXLJdrIckVbFwTeKEx6dReXZKtk8gU2Ch3ow9NqiTsSC4Sx78S1lIPLs7zeqw6ZlbhUi72-Cyy7eMqpFoFqzo_yModXlvy3pkXnwHSE4iK-PC-s"><span class="absolute bottom-2 right-2 bg-surface-container-lowest/90 px-2 py-0.5 rounded text-[11px] font-label-sm text-outline font-semibold">Bulto 8 Lb</span></div><div class="flex flex-col gap-1 mt-1"><span class="text-xs text-outline">Perro · Sensibilidad Dérmica y Gastro</span><h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-2 leading-snug">Comida Seca Para Perro Hill's Prescription Diet Alergias Alimentarias D/d Papa Y Salmón 8 Lb</h2><div class="flex items-baseline gap-2 mt-1"><span class="font-headline-sm text-headline-sm text-primary font-bold">$268.000 COP</span></div><p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">Formulado con salmón y papa para perros con alergias cutáneas y digestivas.</p></div></div><div class="pt-space-md mt-space-sm border-t border-surface-container flex flex-col gap-2"><button class="w-full py-2.5 px-3 rounded-lg bg-primary text-on-primary hover:bg-brand-navy-dark transition-colors font-label-md text-label-md flex items-center justify-center gap-2 font-bold shadow-sm" type="button"><span class="material-symbols-outlined text-[18px]">add_shopping_cart</span><span class="">Agregar al carrito</span></button><div class="flex items-center justify-between text-xs pt-1"><a class="text-secondary hover:underline font-semibold flex items-center gap-1" href="#"><span class="">Ver detalle</span><span class="material-symbols-outlined text-[14px]">arrow_forward</span></a><span class="text-status-success flex items-center gap-1 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-status-success inline-block"></span>Disponible</span></div></div></article><article class="group bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between relative border border-border-soft"><div class="flex flex-col gap-space-sm"><div class="flex items-center justify-between gap-1"><span class="bg-primary text-on-primary font-label-sm text-label-sm px-2.5 py-0.5 rounded-full uppercase tracking-wider font-semibold">Prescription Diet</span><span class="bg-primary/5 text-primary font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">Cardiovascular</span></div><div class="w-full aspect-square bg-surface-ice rounded-lg p-space-md flex items-center justify-center relative overflow-hidden group-hover:bg-surface-container/50 transition-colors"><img class="max-h-full max-w-full object-contain transform group-hover:scale-105 transition-transform duration-300" alt="Hill's Prescription Diet h/d Cardíaco" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIoghXSLsMkXKv6IW2JBFHluIwdPZqrxO5qFz6wRyNpj7nwhzbYkRsakyIIq16t2uPqWkONaTIrczP0y7NP0ugMicU5r5l9mAlLyK4XNmNWL_ptVjY29BMz9iKIjkH3Vrcj60tFbSNSJuxQ1HRlaVij-D7o7jY6AjrVP_wKwvYeM3fuCuVKKa0tiNBeSYy5UJWRUX2Ef4_d2llxRUl-VUrHsBodLgX8amEYynWR6c"><span class="absolute bottom-2 right-2 bg-surface-container-lowest/90 px-2 py-0.5 rounded text-[11px] font-label-sm text-outline font-semibold">Bulto 3.5 Lb</span></div><div class="flex flex-col gap-1 mt-1"><span class="text-xs text-outline">Perro · Soporte Cardíaco</span><h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-2 leading-snug">Comida Seca Para Perro Hill's Prescription Diet Cuidado Cardíaco H/d 3,5 Lb</h2><div class="flex items-baseline gap-2 mt-1"><span class="font-headline-sm text-headline-sm text-primary font-bold">$139.900 COP</span></div><p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">Con Taurina y L-carnitina para mantener la vitalidad del músculo cardíaco.</p></div></div><div class="pt-space-md mt-space-sm border-t border-surface-container flex flex-col gap-2"><button class="w-full py-2.5 px-3 rounded-lg bg-primary text-on-primary hover:bg-brand-navy-dark transition-colors font-label-md text-label-md flex items-center justify-center gap-2 font-bold shadow-sm" type="button"><span class="material-symbols-outlined text-[18px]">add_shopping_cart</span><span class="">Agregar al carrito</span></button><div class="flex items-center justify-between text-xs pt-1"><a class="text-secondary hover:underline font-semibold flex items-center gap-1" href="#"><span class="">Ver detalle</span><span class="material-symbols-outlined text-[14px]">arrow_forward</span></a><span class="text-status-success flex items-center gap-1 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-status-success inline-block"></span>Disponible</span></div></div></article><article class="group bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between relative border border-border-soft"><div class="flex flex-col gap-space-sm"><div class="flex items-center justify-between gap-1"><span class="bg-primary text-on-primary font-label-sm text-label-sm px-2.5 py-0.5 rounded-full uppercase tracking-wider font-semibold">Prescription Diet</span><span class="bg-primary/5 text-primary font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">Movilidad Articular</span></div><div class="w-full aspect-square bg-surface-ice rounded-lg p-space-md flex items-center justify-center relative overflow-hidden group-hover:bg-surface-container/50 transition-colors"><img class="max-h-full max-w-full object-contain transform group-hover:scale-105 transition-transform duration-300" alt="Hill's Prescription Diet j/d Articular" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOmtVFAZijcMpwt0JVUgRcwHbg1hx87y8lsMCXMBHes13GxWCyJwFTnLCvraoGVT4zZ3JXWWdqipTYPwx4PA0xvURYyPLsXqdxtuy2s6Xj8fR36ZeqzaM85JLY0kOjQqTS4-JXICLPbOKhFamQcecV6Z2r7XAtRY-50e3StHcb8oQ0a3NWGSYLKdU-gQYP6GaPQaqiFx-dviyGpiSDur3PuTu72zPLlNPOCMBmxRQ"><span class="absolute bottom-2 right-2 bg-surface-container-lowest/90 px-2 py-0.5 rounded text-[11px] font-label-sm text-outline font-semibold">Bulto 8.5 Lb</span></div><div class="flex flex-col gap-1 mt-1"><span class="text-xs text-outline">Perro · Cuidado Articular</span><h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-2 leading-snug">Comida Seca Para Perro Hill's Prescription Diet Cuidado Articular J/d 8,5 Lb</h2><div class="flex items-baseline gap-2 mt-1"><span class="font-headline-sm text-headline-sm text-primary font-bold">$289.000 COP</span></div><p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">Enriquecido con EPA, glucosamina y condroitina para mejorar la marcha en 21 días.</p></div></div><div class="pt-space-md mt-space-sm border-t border-surface-container flex flex-col gap-2"><button class="w-full py-2.5 px-3 rounded-lg bg-primary text-on-primary hover:bg-brand-navy-dark transition-colors font-label-md text-label-md flex items-center justify-center gap-2 font-bold shadow-sm" type="button"><span class="material-symbols-outlined text-[18px]">add_shopping_cart</span><span class="">Agregar al carrito</span></button><div class="flex items-center justify-between text-xs pt-1"><a class="text-secondary hover:underline font-semibold flex items-center gap-1" href="#"><span class="">Ver detalle</span><span class="material-symbols-outlined text-[14px]">arrow_forward</span></a><span class="text-status-success flex items-center gap-1 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-status-success inline-block"></span>Disponible</span></div></div></article></div>
+<!-- Pagination Component exactly as verbatim -->
+<nav aria-label="Paginación" class="flex flex-wrap items-center justify-center gap-2 pt-space-lg">
+<button class="px-4 py-2 rounded-lg bg-surface-container-lowest text-outline font-label-md text-label-md hover:bg-surface-ice hover:text-primary transition-colors flex items-center gap-1" type="button">
+              &lt; Anterior
+            </button>
+<button class="w-10 h-10 rounded-lg bg-secondary-fixed text-primary font-bold font-label-md text-label-md shadow-sm" type="button">
+              1
+            </button>
+<button class="w-10 h-10 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md hover:bg-surface-ice transition-colors" type="button">
+              2
+            </button>
+<button class="w-10 h-10 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md hover:bg-surface-ice transition-colors" type="button">
+              3
+            </button>
+<span class="text-outline px-1">...</span>
+<button class="px-4 py-2 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md hover:bg-surface-ice transition-colors flex items-center gap-1 font-semibold" type="button">
+              Siguiente &gt;
+            </button>
+</nav>
+</div>
+</div>
+</div>
+</main>
+<!-- Value Proposition / Trust Pillars Section -->
+<section class="w-full bg-surface-container-lowest py-space-xl">
+<div class="max-w-[1280px] mx-auto px-gutter flex flex-col gap-space-lg"><div class="text-center max-w-2xl mx-auto"><span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold">Por qué confiar en Gabrica</span><h2 class="font-headline-lg text-headline-lg text-primary tracking-tight mt-1">Cuidamos a tu mascota con amor y respaldo veterinario</h2><p class="font-body-md text-body-md text-on-surface-variant mt-2">Garantizamos la cadena de frío, autenticidad y entrega oportuna de las mejores marcas para consentir y proteger a tu compañero de vida.</p></div><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md"><div class="bg-surface-ice p-space-md rounded-xl flex flex-col gap-space-xs border border-border-soft"><div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[22px]">local_shipping</span></div><h3 class="font-headline-sm text-headline-sm text-primary">Envío Rápido y Seguro</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Entregas en 24 a 48 horas en Bogotá, Medellín, Cali, Barranquilla y todo el país.</p></div><div class="bg-surface-ice p-space-md rounded-xl flex flex-col gap-space-xs border border-border-soft"><div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[22px]">support_agent</span></div><h3 class="font-headline-sm text-headline-sm text-primary">Asesoría Nutricional Gratuita</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Nuestros expertos y veterinarios te orientan sobre el alimento ideal para la etapa y condición de tu peludo.</p></div><div class="bg-surface-ice p-space-md rounded-xl flex flex-col gap-space-xs border border-border-soft"><div class="w-10 h-10 rounded-lg bg-accent-cyan-light flex items-center justify-center text-brand-navy-dark"><span class="material-symbols-outlined text-[22px]">verified</span></div><h3 class="font-headline-sm text-headline-sm text-primary">Garantía de Autenticidad</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Productos 100% originales con registro ICA y cadena de almacenamiento garantizada.</p></div><div class="bg-surface-ice p-space-md rounded-xl flex flex-col gap-space-xs border border-border-soft"><div class="w-10 h-10 rounded-lg bg-primary-fixed-dim flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[22px]">loyalty</span></div><h3 class="font-headline-sm text-headline-sm text-primary">Puntos y Ahorro Recurrente</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Acumula puntos en cada pedido y programa suscripciones de comida con 10% de descuento continuo.</p></div></div></div>
+</section>
+<!-- B2B / Clinic Call To Action Banner -->
+<section class="w-full bg-brand-navy-dark text-on-primary py-space-xl relative overflow-hidden">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-secondary-container/10 blur-2xl pointer-events-none"></div>
+<div class="max-w-[1280px] mx-auto px-gutter relative z-10 flex flex-col lg:flex-row items-center justify-between gap-space-xl"><div class="flex items-center gap-space-md max-w-2xl"><div class="hidden sm:flex shrink-0 items-center justify-center bg-surface-container-lowest px-3 py-1.5 rounded-xl shadow-sm"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgmzux6koqD88gcVGc811DkbYEyLWUX2NZoDo_P-BxNi40m_odx3ApJ6rqVE2H6gnZImTVQOLX_S9RUIga9HuQvS6n9qZUebrqxCFJpFg0dM6X5mTe-WhrhJEp7N_2KgKLv97vI7WA7d6SeiXXSssrlGPwL5ydUeLaSWqfwTeEJNmlcAXLOvHBpcLweUnsnoch-EQtCjibK-ua5gas4jjZIZB5JwGHza0tUiO47Y5u3ozCgARIqxu1" alt="Gabrica" class="h-10 md:h-12 w-auto object-contain"></div><div class="flex flex-col gap-1"><span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider font-bold">Club Gabrica Pet Parents · Pasaporte del Arrunchis</span><h2 class="font-headline-md text-headline-md text-white">¡Únete al Club Gabrica y obtén el Pasaporte del Arrunchis de tu Peludo!</h2><p class="font-body-md text-body-md text-on-primary-container">Con el Pasaporte del Arrunchis accedes al seguimiento de salud veterinaria, control de vacunación, historial nutricional personalizado, recompensas de cariño y beneficios exclusivos para el bienestar y amor incondicional de tu perro o gato.</p></div></div><div class="flex flex-wrap items-center gap-space-sm shrink-0"><a class="px-6 py-3 rounded-full bg-secondary-container text-on-secondary-container font-label-lg text-label-lg hover:bg-secondary-fixed transition-colors font-bold shadow-md flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span class="">Únete y Obtén tu Pasaporte del Arrunchis</span></a><a class="px-6 py-3 rounded-full bg-primary-container text-white font-label-lg text-label-lg hover:bg-primary transition-colors font-medium flex items-center gap-1.5" href="#"><span class="material-symbols-outlined text-[18px]">chat</span><span class="">Consultar con Asesor Veterinario</span></a></div></div>
+</section>
+</div>
+<script>
+  (function() {
+    // Quick micro-interactions for the catalog checkboxes
+    const checkboxes = document.querySelectorAll('aside input[type="checkbox"]');
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', () => {
+        // Subtle feedback simulation
+        const parentLabel = cb.closest('label');
+        if (parentLabel) {
+          parentLabel.style.transform = 'scale(0.98)';
+          setTimeout(() => {
+            parentLabel.style.transform = '';
+          }, 150);
+        }
+      });
+    });
+  })();
+</script></main><footer class="w-full bg-primary text-on-primary"><div class="bg-brand-navy-dark border-b border-primary-container"><div class="max-w-[1280px] mx-auto px-gutter py-space-md flex flex-wrap items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed">Marcas Autorizadas:</span></div><div class="flex flex-wrap items-center gap-space-lg text-label-sm font-label-sm text-surface-variant/80"><span class="hover:text-white transition-colors">Hill's Pet Nutrition</span><span class="">•</span><span class="hover:text-white transition-colors">Zoetis</span><span class="">•</span><span class="hover:text-white transition-colors">GranPlus</span><span class="">•</span><span class="hover:text-white transition-colors">Equilíbrio</span><span class="">•</span><span class="hover:text-white transition-colors">MAX</span><span class="">•</span><span class="hover:text-white transition-colors">Holliday</span><span class="">•</span><span class="hover:text-white transition-colors">Guaymor</span><span class="">•</span><span class="hover:text-white transition-colors">Vetnil</span><span class="">•</span><span class="hover:text-white transition-colors">Hydra</span></div></div></div><div class="max-w-[1280px] mx-auto px-gutter py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl mb-space-xl"><div class="flex flex-col gap-space-sm"><div class="flex items-center w-fit bg-surface-container-lowest px-3 py-1.5 rounded-xl shadow-sm"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgmzux6koqD88gcVGc811DkbYEyLWUX2NZoDo_P-BxNi40m_odx3ApJ6rqVE2H6gnZImTVQOLX_S9RUIga9HuQvS6n9qZUebrqxCFJpFg0dM6X5mTe-WhrhJEp7N_2KgKLv97vI7WA7d6SeiXXSssrlGPwL5ydUeLaSWqfwTeEJNmlcAXLOvHBpcLweUnsnoch-EQtCjibK-ua5gas4jjZIZB5JwGHza0tUiO47Y5u3ozCgARIqxu1" alt="Gabrica" class="h-10 md:h-12 w-auto object-contain"></div><p class="font-body-md text-body-md text-surface-container-high font-medium">Cuidamos a tu mascota con amor y respaldo.</p><p class="font-body-sm text-body-sm text-on-primary-container mt-space-xs">Tienda oficial de nutrición clínica y bienestar animal con despachos a toda Colombia.</p></div><div class="flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-secondary-fixed mb-space-xs">Mi Cuenta y Pedidos</span><a class="font-body-sm text-body-sm text-surface-container-high hover:text-white transition-colors" data-path="rastrear-pedido" href="#">Rastrear mi pedido</a><a class="font-body-sm text-body-sm text-surface-container-high hover:text-white transition-colors" data-path="medios-de-pago" href="#">Medios de pago (PSE, Tarjetas, Nequi)</a><a class="font-body-sm text-body-sm text-surface-container-high hover:text-white transition-colors" data-path="envios-devoluciones" href="#">Envíos y devoluciones</a><a class="font-body-sm text-body-sm text-surface-container-high hover:text-white transition-colors" data-path="preguntas-frecuentes" href="#">Preguntas Frecuentes</a></div><div class="flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-secondary-fixed mb-space-xs">Guía para Pet Parents</span><a class="font-body-sm text-body-sm text-surface-container-high hover:text-white transition-colors" data-path="blog-mascotas" href="#">Blog Universo Mascotas</a><a class="font-body-sm text-body-sm text-surface-container-high hover:text-white transition-colors" data-path="calculadora-porciones" href="#">Calculadora de Porciones</a><a class="font-body-sm text-body-sm text-surface-container-high hover:text-white transition-colors" data-path="directorio-veterinarias" href="#">Directorio de Veterinarias Aliadas</a><a class="font-body-sm text-body-sm text-surface-container-high hover:text-white transition-colors" data-path="suscripcion-alimento" href="#">Programa Tu Entrega Periódica</a></div><div class="flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-secondary-fixed mb-space-xs">Contacto y Ayuda</span><span class="font-body-sm text-body-sm text-white font-medium">Línea de WhatsApp Tutores:</span><a class="font-body-sm text-body-sm text-secondary-fixed hover:underline" href="#">+57 3173100715</a><span class="font-body-sm text-body-sm text-on-primary-container pt-space-xs">PBX Bogotá: +57 601 5190040</span><span class="font-body-sm text-body-sm text-on-primary-container">contacto@gabrica.com.co</span><span class="font-body-sm text-body-sm text-on-primary-container">Lunes a Sábado: 8:00 am - 7:00 pm</span></div></div><div class="border-t border-primary-container pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-primary-container"><p class="">© 2025 Gabrica S.A.S. Todos los derechos reservados. Colombia.</p><p class="text-right">Distribución especializada en Medicina Veterinaria y Nutrición Animal.</p></div></div></footer>
+
+<script src="src/assets/js/main.js"></script>
+</body></html>

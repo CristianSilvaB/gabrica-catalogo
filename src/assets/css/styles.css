@@ -1,0 +1,154 @@
+/* ==========================================================================
+   Gabrica Pet Care & Veterinary Ecosystem - Main Stylesheet
+   ========================================================================== */
+
+/* Custom CSS variables reflecting Gabrica Design System */
+:root {
+  --gabrica-primary: #002343;
+  --gabrica-primary-container: #003967;
+  --gabrica-secondary: #00658c;
+  --gabrica-secondary-container: #00bafd;
+  --gabrica-brand-navy-dark: #002747;
+  --gabrica-accent-cyan: #C0F0FF;
+  --gabrica-surface: #fbf9fa;
+  --gabrica-surface-ice: #F8FEFF;
+  --gabrica-border-soft: #D7E9F4;
+}
+
+/* Base reset enhancements */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--gabrica-surface);
+  color: #1b1c1d;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Card interactions */
+.product-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px -6px rgba(0, 57, 103, 0.08), 0 4px 8px -2px rgba(0, 57, 103, 0.04);
+}
+
+/* Active filter badge animations */
+.filter-chip-active {
+  background-color: #003967 !important;
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   Club Bienvenida & Pasaporte del Arrunchis Modal Styles
+   ========================================================================== */
+
+#club-modal-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+#club-modal-wrapper.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+#club-modal-wrapper .modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(2, 6, 23, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+#club-modal-wrapper .modal-dialog {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 58rem; /* max-w-4xl */
+  max-height: 92vh;
+  overflow-y: auto;
+  border-radius: 1.5rem;
+  background: #ffffff;
+  box-shadow: 0 25px 50px -12px rgba(0, 39, 71, 0.35);
+  transform: scale(0.92) translateY(15px);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#club-modal-wrapper.active .modal-dialog {
+  transform: scale(1) translateY(0);
+}
+
+/* Pet-friendly organic background wave pattern */
+.bg-gabrica-blob {
+  background: radial-gradient(circle at 10% 20%, rgba(0, 84, 154, 0.08) 0%, transparent 40%),
+              radial-gradient(circle at 90% 80%, rgba(255, 184, 0, 0.1) 0%, transparent 40%),
+              radial-gradient(circle at 50% 50%, rgba(0, 57, 103, 0.04) 0%, transparent 60%);
+}
+
+/* Passport credential card golden shimmer and depth */
+.passport-card {
+  background: linear-gradient(135deg, #002d52 0%, #003967 55%, #004d88 100%);
+  box-shadow: 0 20px 40px -15px rgba(0, 41, 74, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+}
+
+.gold-foil {
+  background: linear-gradient(135deg, #FFE082 0%, #FFB800 45%, #FFD54F 80%, #FFA000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.badge-stamp {
+  border: 2px dashed rgba(255, 184, 0, 0.65);
+}
+
+/* Notification Toast */
+#toast-notification {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 120;
+  transform: translateY(120%);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#toast-notification.show {
+  transform: translateY(0);
+  opacity: 1;
+}
